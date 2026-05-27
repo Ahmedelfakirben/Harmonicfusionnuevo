@@ -161,7 +161,7 @@ function initScrollAnimations() {
   
   if (scrollSection && scrollContainer) {
     function getScrollAmount() {
-      const containerWidth = scrollContainer.scrollWidth
+      const containerWidth = scrollContainer!.scrollWidth
       return -(containerWidth - window.innerWidth)
     }
 
