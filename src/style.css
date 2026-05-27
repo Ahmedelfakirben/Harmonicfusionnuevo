@@ -307,11 +307,12 @@ html.lenis, html.lenis body { height: auto; }
   .section-title { font-size: clamp(2.5rem, 10vw, 3.5rem); white-space: normal; }
   
   /* Footer */
-  .epic-mask-container { clip-path: inset(25vh 10vw round 30px); }
-  .epic-btn-text { padding: 1rem; font-size: clamp(0.7rem, 4vw, 1rem); text-align: center; white-space: normal; line-height: 1.4; }
+  .epic-mask-container { clip-path: inset(30vh 5vw round 30px); }
+  .epic-btn-text { padding: 0.8rem 1.5rem; font-size: 0.85rem; text-align: center; white-space: nowrap; max-width: 90vw; overflow: hidden; }
   .socials { gap: 1rem; justify-content: center; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; padding-bottom: 2rem; }
   .epic-footer-section { height: 150vh; }
+  .footer-cta h2 { font-size: clamp(2rem, 8vw, 4rem) !important; white-space: normal !important; }
   
   /* Odyssee Timeline Mobile */
   .odyssee-line-container { left: 0; transform: none; width: 4px; }
