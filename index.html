@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmonic Fusion | Extreme Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Extreme Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring">
+    <svg viewBox="0 0 100 100" class="cursor-svg text-ring">
+      <defs>
+        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+      </defs>
+      <text><textPath href="#circlePath">HARMONIC • FUSION • GHOLALA • </textPath></text>
+    </svg>
+    <span class="cursor-text">VIEW</span>
+  </div>
+
+  <!-- Kinetic Preloader -->
+  <div class="loader">
+    <div class="loader-words-container" style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+      <h1 class="loader-word syne-font">HOLA</h1>
+      <h1 class="loader-word syne-font">SALAM</h1>
+      <h1 class="loader-word syne-font">BONJOUR</h1>
+      <h1 class="loader-word syne-font">CIAO</h1>
+      <h1 class="loader-word syne-font">HELLO</h1>
+      <h1 class="loader-word syne-font">QUAND L'ART</h1>
+      <h1 class="loader-word syne-font">DEVIENT UNE</h1>
+      <h1 class="loader-word syne-font accent-text outline-text">FAÇON DE VIVRE</h1>
+    </div>
+  </div>
+
+  <!-- Magnetic Header -->
+  <header class="header">
+    <div class="logo magnetic-wrap"><div class="magnetic-target">HARMONIC <span>FUSION</span></div></div>
+    <nav class="nav">
+      <div class="magnetic-wrap"><a href="#about" class="nav-hover magnetic-target">Le Concept</a></div>
+      <div class="magnetic-wrap"><a href="#members" class="nav-hover magnetic-target">Les Membres</a></div>
+      <div class="magnetic-wrap"><a href="#concerts" class="nav-hover magnetic-target">Concerts</a></div>
+      <div class="magnetic-wrap"><a href="#gallery" class="nav-hover magnetic-target">Galerie</a></div>
+      <div class="magnetic-wrap"><a href="#contact" class="btn magnetic-target">Booking</a></div>
+    </nav>
+  </header>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg">
+          <div class="hero-bg-scale">
+            <video autoplay loop muted playsinline poster="https://harmonicfusion.org/assets/band-silhouettes.png" id="heroVideo">
+              <source src="https://harmonicfusion.org/Harmonic%20Fusion%20-%20Live%20au%20Festival%20L'Boulvard.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          
+          <div class="hero-desc-container">
+            <h2 class="hero-desc syne-font brutal-smash">
+              Une immersion totale où le son devient materiau et l'espace devient scène.
+            </h2>
+            <div style="margin-top:2rem;"><a href="#about" class="btn-primary gsap-fade-up magnetic-btn">Découvrir le concept</a></div>
+          </div>
+        </div>
+
+        <button id="soundToggle" class="sound-toggle-btn gsap-fade-up">
+          <span class="sound-text">SOUND OFF</span>
+          <div class="sound-bars">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+          </div>
+        </button>
+      </section>
+
+      <!-- The Concept -->
+      <section class="concept-section" id="about" style="position: relative; z-index: 1;">
+        <div class="section-bg-wrapper">
+          <img src="/backgrounds/bg-3.png" class="section-bg-parallax" alt="Background">
+          <div class="section-bg-overlay"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="section-header">
+            <span class="section-subtitle scroll-text-fade">HISTOIRE & PHILOSOPHIE</span>
+            <h2 class="section-title syne-font brutal-smash-scroll">L'Art de la</h2>
+            <h2 class="section-title syne-font brutal-smash-scroll accent-text outline-text">Fusion Théâtrale</h2>
+          </div>
+
+          <div class="concept-grid">
+            <div class="concept-text">
+              <h3 class="syne-font brutal-smash-scroll" style="font-size: 2.5rem; margin-bottom: 2rem;">Un style único: Le Gholala</h3>
+              <p class="scroll-fade-up">Considéré comme l'un des meilleurs groupes de fusion au Maroc, Harmonic Fusion propose un concept unique de <strong>spectacle théâtro-musical</strong>.</p>
+              <br>
+              <p class="scroll-fade-up">Leurs compositions mélangent avec audace la <strong>Darija</strong>, l'<strong>espagnol</strong> et l'<strong>arabe classique</strong> sur des textes poétiques y engagés. Inspirées des spiritualités du Nord de l'Afrique, leurs œuvres intègrent le théâtre comique en plein concert musical.</p>
+              
+              <div class="stats-container">
+                <div class="stat-box scroll-fade-up"><div class="stat-num syne-font">2006</div><div class="stat-label">Fondation</div></div>
+                <div class="stat-box scroll-fade-up"><div class="stat-num syne-font">15+</div><div class="stat-label">Morceaux</div></div>
+                <div class="stat-box scroll-fade-up"><div class="stat-num syne-font">1er</div><div class="stat-label">Tremplin</div></div>
+              </div>
+            </div>
+
+            <!-- Image Mask Reveal + Parallax -->
+            <div class="concept-visual">
+              <div class="clip-reveal-container">
+                <div class="parallax-container">
+                  <img src="https://harmonicfusion.org/assets/band-caricature.png" alt="Caricature Harmonic Fusion" class="parallax-img clip-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ODYSSÉE ARTISTIQUE SECTION -->
+      <section class="odyssee-section container" id="odyssee" style="padding: 15vh 0; position: relative; z-index: 2;">
+        <div class="section-header text-center" style="margin-bottom: 15vh;">
+          <span class="section-subtitle scroll-fade-up">NOTRE HISTOIRE</span>
+          <h2 class="section-title syne-font brutal-smash-scroll outline-text" style="color: white; margin-bottom: 2rem;">Notre Odyssée Artistique</h2>
+        </div>
+        
+        <div class="odyssee-timeline">
+          <!-- The Central SVG Line that draws itself -->
+          <div class="odyssee-line-container">
+            <svg class="odyssee-svg-line" viewBox="0 0 10 100" preserveAspectRatio="none">
+              <line x1="5" y1="0" x2="5" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="4" />
+              <line class="odyssee-line-draw" x1="5" y1="0" x2="5" y2="100" stroke="var(--color-accent)" stroke-width="4" vector-effect="non-scaling-stroke" />
+            </svg>
+          </div>
+
+          <!-- Timeline Items -->
+          <div class="odyssee-item left">
+            <div class="odyssee-content">
+              <div class="odyssee-badge syne-font">2006</div>
+              <div class="odyssee-card glass-panel">
+                <h3 class="syne-font">Fondation du Groupe</h3>
+                <p>Créé sous le nom initial de <em>Myler Harmonic</em> par Youness El Gueniari et Abderahman El Khamal à Tétouan. Le groupe s'investit dès le départ dans l'animation d'ateliers culturels.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="odyssee-item right">
+            <div class="odyssee-content">
+              <div class="odyssee-badge syne-font">2010</div>
+              <div class="odyssee-card glass-panel">
+                <h3 class="syne-font">Génération Mawazine</h3>
+                <p>Le groupe se hisse en finale nationale du prestigieux festival Génération Mawazine (éditions 2010 y 2011), confirmant son statut d'étoile montante.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="odyssee-item left">
+            <div class="odyssee-content">
+              <div class="odyssee-badge syne-font">2014</div>
+              <div class="odyssee-card glass-panel">
+                <h3 class="syne-font">Tournée Orchestre de Jazz Français</h3>
+                <p>Invité d'honneur pour une tournée exclusive de 15 jours à travers 7 villes du Maroc aux côtés de l'Orchestre National du Jazz Français, couronnée à l'IMA à Paris.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="odyssee-item right">
+            <div class="odyssee-content">
+              <div class="odyssee-badge syne-font">2017</div>
+              <div class="odyssee-card glass-panel">
+                <h3 class="syne-font">Naissance de "Radio GHOLALA"</h3>
+                <p>Première mundial del espectáculo teatral y musical <strong>Radio GHOLALA</strong> en el escenario mítico del Festival L'Boulevard en Casablanca, ganando el primer premio.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="odyssee-item left">
+            <div class="odyssee-content">
+              <div class="odyssee-badge syne-font">2018</div>
+              <div class="odyssee-card glass-panel">
+                <h3 class="syne-font">Festival Parallèle 37</h3>
+                <p>El grupo participa brillantemente en la primera edición en Chefchaouen, siendo recompensado con un certificado oficial de excelencia artística.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="odyssee-item right">
+            <div class="odyssee-content">
+              <div class="odyssee-badge syne-font">2019</div>
+              <div class="odyssee-card glass-panel">
+                <h3 class="syne-font">Couronnement International</h3>
+                <p>Obtención del Primer Premio de Excelencia en el Festival International Karan en Oujda, seguida de representaciones en Sevilla y el proyecto LIVE ROOM.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HORIZONTAL SCROLL SECTION (Les Créateurs) -->
+      <section class="horizontal-scroll-section" id="members">
+        <div class="horizontal-scroll-container">
+          <!-- Title Item -->
+          <div class="horizontal-item title-item" style="display: flex; flex-direction: column; justify-content: center; min-width: 40vw; width: auto; padding-right: 8vw; padding-left: 5vw;">
+            <span class="section-subtitle">LES ARTISTES</span>
+            <h2 class="section-title syne-font brutal-smash-scroll outline-text" style="color: white; white-space: nowrap;">Les Créateurs</h2>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-abderahman.jpeg" class="h-img" alt="Abderahman"></div>
+              <h3 class="syne-font">Abderahman El Khamal</h3>
+              <span>Chanteur & Compositeur</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-mustapha.jpeg" class="h-img" alt="Mustapha"></div>
+              <h3 class="syne-font">Mustapha Loulanti</h3>
+              <span>Chanteur & Dir. Artistique</span>
+            </div>
+          </div>
+          
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-youness.jpeg" class="h-img" alt="Youness"></div>
+              <h3 class="syne-font">Youness El Guenyari</h3>
+              <span>Batteur & Administrateur</span>
+            </div>
+          </div>
+
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-nas.jpeg" class="h-img" alt="Nas"></div>
+              <h3 class="syne-font">Nas Mdaghri Alaoui</h3>
+              <span>Bassiste</span>
+            </div>
+          </div>
+
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-ahmed.jpeg" class="h-img" alt="Ahmed"></div>
+              <h3 class="syne-font">Ahmed El Fakir</h3>
+              <span>Guitariste & Ingénieur Son</span>
+            </div>
+          </div>
+          
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-hamza.jpeg" class="h-img" alt="Hamza"></div>
+              <h3 class="syne-font">Hamza Aissatin</h3>
+              <span>Guitariste</span>
+            </div>
+          </div>
+          
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-mohamed.png" class="h-img" alt="Mohamed"></div>
+              <h3 class="syne-font">Mohamed Abakioui</h3>
+              <span>Pianiste & Arrangeur</span>
+            </div>
+          </div>
+          
+          <div class="horizontal-item">
+            <div class="h-card img-hover-trigger">
+              <div class="h-img-wrap"><img src="https://harmonicfusion.org/assets/member-amine.jpeg" class="h-img" alt="Amine"></div>
+              <h3 class="syne-font">Amine Msied</h3>
+              <span>Flûtiste & Clarinettiste</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MUSIC SECTION -->
+      <section class="music-section" id="repertoire" style="margin-top: 15vh; padding: 10vh 0; position: relative; z-index: 1; perspective: 1000px;">
+        <div class="section-bg-wrapper">
+          <img src="/backgrounds/bg-5.png" class="section-bg-parallax" alt="Background">
+          <div class="section-bg-overlay"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="section-header text-center">
+            <span class="section-subtitle scroll-text-fade">DISCOGRAPHIE VIBRANTE</span>
+            <h2 class="section-title syne-font brutal-smash-scroll">Le Répertoire</h2>
+            <h2 class="section-title syne-font brutal-smash-scroll outline-text">Gholala</h2>
+          </div>
+          
+          <!-- Extreme Music Player -->
+          <div class="music-player-layout">
+            <!-- Left: Player -->
+            <div class="player-card glass-panel" id="playerCard">
+              <div class="vinyl-wrapper">
+                <div class="vinyl-record" id="vinylRecord">
+                  <div class="vinyl-grooves"></div>
+                  <div class="vinyl-label"></div>
+                  <div class="vinyl-hole"></div>
+                </div>
+              </div>
+              <div class="player-info">
+                <h3 class="song-title syne-font" id="currentTitle">Rokhssa</h3>
+                <span class="genre-pill" id="currentGenre">POLKA POP</span>
+              </div>
+              <div class="progress-container">
+                <span class="time-current" id="timeCurrent">0:00</span>
+                <div class="progress-bar-wrapper" id="progressWrapper">
+                  <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+                <span class="time-total" id="timeTotal">0:00</span>
+              </div>
+              <div class="player-controls">
+                <button class="ctrl-btn" id="btnPrev"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+                <button class="ctrl-btn play-btn" id="btnPlayPause"><svg width="32" height="32" viewBox="0 0 24 24" fill="white" id="playIcon"><path d="M8 5v14l11-7z"/></svg></button>
+                <button class="ctrl-btn" id="btnNext"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+              </div>
+              <audio id="audioPlayer" src="/audio/01 01 - Harmonic Fusion - Rokhssa.mp3"></audio>
+            </div>
+
+            <!-- Right: Tracklist -->
+            <div class="tracklist-card glass-panel" id="tracklistCard">
+              <h3 class="tracklist-header syne-font">ALBUM TRACKS</h3>
+              <ul class="track-list" id="trackList">
+                <li class="track-item active" data-src="/audio/01 01 - Harmonic Fusion - Rokhssa.mp3" data-title="Rokhssa" data-genre="POLKA POP">
+                  <span class="track-num">01</span>
+                  <span class="track-title">Rokhssa</span>
+                  <span class="track-genre">POLKA POP</span>
+                  <button class="track-play-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                </li>
+                <li class="track-item" data-src="/audio/02 02 - Harmonic Fusion - your Smile.mp3" data-title="Your Smile" data-genre="REGGAE">
+                  <span class="track-num">02</span>
+                  <span class="track-title">Your Smile</span>
+                  <span class="track-genre">REGGAE</span>
+                  <button class="track-play-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                </li>
+                <li class="track-item" data-src="/audio/03 03 - Harmonic Fusion - Partager moi.mp3" data-title="Partager Moi" data-genre="BLUES">
+                  <span class="track-num">03</span>
+                  <span class="track-title">Partager Moi</span>
+                  <span class="track-genre">BLUES</span>
+                  <button class="track-play-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                </li>
+                <li class="track-item" data-src="/audio/04 04 - Harmonic Fusion - Nia GharQa.mp3" data-title="Nia Gharqa" data-genre="ROCK FUSION">
+                  <span class="track-num">04</span>
+                  <span class="track-title">Nia Gharqa</span>
+                  <span class="track-genre">ROCK FUSION</span>
+                  <button class="track-play-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                </li>
+                <li class="track-item" data-src="/audio/05 05 - Harmonic Fusion - Nueva Esperanza.mp3" data-title="Nueva Esperanza" data-genre="ACOUSTIC">
+                  <span class="track-num">05</span>
+                  <span class="track-title">Nueva Esperanza</span>
+                  <span class="track-genre">ACOUSTIC</span>
+                  <button class="track-play-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Festivals & Timeline -->
+      <section class="festivals-section" id="concerts" style="margin-top: 10vh; position: relative; z-index: 1;">
+        <div class="section-bg-wrapper">
+          <img src="/backgrounds/bg-6.png" class="section-bg-parallax" alt="Background">
+          <div class="section-bg-overlay"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="grid-2">
+            <div class="festivals-left">
+              <span class="section-subtitle scroll-text-fade">SCÈNES EN FLAMMES</span>
+              <h2 class="section-title syne-font brutal-smash-scroll">Festivals &</h2>
+              <h2 class="section-title syne-font brutal-smash-scroll outline-text">Tournées</h2>
+              <p class="scroll-fade-up" style="margin-top: 2rem; color: #ccc; line-height: 1.6; font-size: 1.25rem;">
+                Leur répertoire navigue entre les classiques du Chaabi-standard, le raffinement du Gharnati, et les envolées contemporaines des musiques del mundo.
+              </p>
+            </div>
+
+            <div class="festivals-right timeline-vertical">
+              <ul class="fest-list">
+                <li class="fest-item timeline-line-draw">
+                  <div class="fest-year syne-font">FRANCE</div>
+                  <div class="fest-details">
+                    <h4>Concerts à l'Institut du Monde Arabe</h4>
+                    <span>Paris</span>
+                  </div>
+                </li>
+                <li class="fest-item timeline-line-draw">
+                  <div class="fest-year syne-font">MAROC</div>
+                  <div class="fest-details">
+                    <h4>Festival L'Boulevard</h4>
+                    <span>Casablanca</span>
+                  </div>
+                </li>
+                <li class="fest-item timeline-line-draw">
+                  <div class="fest-year syne-font">ESPAGNE</div>
+                  <div class="fest-details">
+                    <h4>Expo Marocaine à Séville</h4>
+                    <span>Séville</span>
+                  </div>
+                </li>
+                <li class="fest-item timeline-line-draw">
+                  <div class="fest-year syne-font">MAROC</div>
+                  <div class="fest-details">
+                    <h4>Festival Génération Mawazine</h4>
+                    <span>Rabat</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Extreme Gallery -->
+      <section class="gallery-section" id="gallery" style="position: relative; z-index: 1; background: transparent;">
+        <div class="section-bg-wrapper">
+          <img src="/backgrounds/bg-7.png" class="section-bg-parallax" alt="Background">
+          <div class="section-bg-overlay"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="section-header text-center">
+            <span class="section-subtitle scroll-text-fade">PHOTOS & ÉVÉNEMENTS</span>
+            <h2 class="section-title syne-font brutal-smash-scroll outline-text">Galerie</h2>
+          </div>
+
+          <div class="gallery-grid-masonry">
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-large">
+              <img src="/event-photos/14.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-small" style="margin-top: 10vh;">
+              <img src="/event-photos/2.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-wide">
+              <img src="/event-photos/4.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-small">
+              <img src="/event-photos/5.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-large" style="margin-top: -5vh;">
+              <img src="/event-photos/11.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-small">
+              <img src="/event-photos/13.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-wide">
+              <img src="/event-photos/15.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-small">
+              <img src="/event-photos/9.jpg" class="clip-img" alt="Gallery">
+            </div>
+            <div class="gallery-item clip-reveal-container img-hover-trigger size-large">
+              <img src="/event-photos/18.jpg" class="clip-img" alt="Gallery">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EPIC FINALE FOOTER -->
+      <footer class="epic-footer-section" id="contact">
+        <div class="epic-sticky">
+          
+          <div class="container" style="position: relative; z-index: 10; padding-top: 15vh; pointer-events: none;">
+            <div class="footer-cta text-center">
+              <h2 class="syne-font brutal-smash-scroll" style="font-size: clamp(4rem, 11vw, 12rem); line-height: 0.85; white-space: nowrap;">Entrez dans la</h2>
+              <h2 class="syne-font brutal-smash-scroll accent-text outline-text" style="font-size: clamp(4rem, 11vw, 12rem); line-height: 0.85; white-space: nowrap;">Radio Gholala</h2>
+            </div>
+          </div>
+
+          <!-- Expanding Mask Button -->
+          <div class="epic-mask-container">
+            <img src="/backgrounds/bg-footer.png" class="epic-bg-img" alt="Harmonic Fusion Epic Finale">
+            <div class="epic-overlay"></div>
+            
+            <!-- Floating Button Text -->
+            <a href="mailto:booking@harmonicfusion.org" class="epic-btn-text syne-font magnetic-btn">
+              BOOKING & CONTACT
+            </a>
+          </div>
+
+          <div class="footer-bottom epic-footer-bottom">
+            <span>© 2026 HARMONIC FUSION</span>
+            <span>TÉTOUAN, MAROC</span>
+            <div class="socials">
+              <div class="magnetic-wrap"><a href="#" class="nav-hover magnetic-target">Instagram</a></div>
+              <div class="magnetic-wrap"><a href="#" class="nav-hover magnetic-target">YouTube</a></div>
+              <div class="magnetic-wrap"><a href="#" class="nav-hover magnetic-target">Spotify</a></div>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
