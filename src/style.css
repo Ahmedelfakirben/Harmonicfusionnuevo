@@ -8,6 +8,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html { touch-action: manipulation; }
 
 body {
   background-color: var(--color-bg); color: var(--color-text);
