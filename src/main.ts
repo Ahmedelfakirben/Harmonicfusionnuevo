@@ -269,6 +269,129 @@ function initScrollAnimations() {
     })
   })
 
+  // --- AUDIO PLAYER LOGIC ---
+  const audio = document.getElementById('audioPlayer') as HTMLAudioElement;
+  const btnPlayPause = document.getElementById('btnPlayPause');
+  const playIcon = document.getElementById('playIcon');
+  const btnNext = document.getElementById('btnNext');
+  const btnPrev = document.getElementById('btnPrev');
+  const trackItems = document.querySelectorAll('.track-item');
+  const currentTitle = document.getElementById('currentTitle');
+  const currentGenre = document.getElementById('currentGenre');
+  const vinylRecord = document.querySelector('.vinyl-record');
+  const progressBar = document.getElementById('progressBar');
+  const progressWrapper = document.getElementById('progressWrapper');
+  const timeCurrent = document.getElementById('timeCurrent');
+  const timeTotal = document.getElementById('timeTotal');
+
+  let currentTrackIndex = 0;
+  let isPlaying = false;
+
+  // Track Rotation Animation (GSAP)
+  const vinylSpin = gsap.to(vinylRecord, {
+    rotation: 360,
+    duration: 4,
+    repeat: -1,
+    ease: "none",
+    paused: true
+  });
+
+  const loadTrack = (index: number) => {
+    trackItems.forEach(t => t.classList.remove('active'));
+    const item = trackItems[index];
+    item.classList.add('active');
+    
+    // Fix case-sensitive path (/audio/ -> /Audio/)
+    const rawSrc = item.getAttribute('data-src') || '';
+    audio.src = rawSrc.replace('/audio/', '/Audio/');
+    
+    if(currentTitle) currentTitle.textContent = item.getAttribute('data-title');
+    if(currentGenre) currentGenre.textContent = item.getAttribute('data-genre');
+  };
+
+  const playMusic = () => {
+    isPlaying = true;
+    audio.play();
+    if(playIcon) playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`; // Pause icon
+    vinylSpin.play();
+  };
+
+  const pauseMusic = () => {
+    isPlaying = false;
+    audio.pause();
+    if(playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"/>`; // Play icon
+    vinylSpin.pause();
+  };
+
+  if(btnPlayPause) {
+    btnPlayPause.addEventListener('click', () => {
+      if(isPlaying) pauseMusic();
+      else playMusic();
+    });
+  }
+
+  if(btnNext) {
+    btnNext.addEventListener('click', () => {
+      currentTrackIndex = (currentTrackIndex + 1) % trackItems.length;
+      loadTrack(currentTrackIndex);
+      if(isPlaying) playMusic();
+    });
+  }
+
+  if(btnPrev) {
+    btnPrev.addEventListener('click', () => {
+      currentTrackIndex = (currentTrackIndex - 1 + trackItems.length) % trackItems.length;
+      loadTrack(currentTrackIndex);
+      if(isPlaying) playMusic();
+    });
+  }
+
+  trackItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      currentTrackIndex = index;
+      loadTrack(currentTrackIndex);
+      playMusic();
+    });
+  });
+
+  if(audio) {
+    audio.addEventListener('timeupdate', () => {
+      if(progressBar) {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = `${percent}%`;
+      }
+      
+      if(timeCurrent) {
+        const currentMins = Math.floor(audio.currentTime / 60);
+        const currentSecs = Math.floor(audio.currentTime % 60);
+        timeCurrent.textContent = `${currentMins}:${currentSecs < 10 ? '0' : ''}${currentSecs}`;
+      }
+    });
+
+    audio.addEventListener('loadedmetadata', () => {
+      if(timeTotal && !isNaN(audio.duration)) {
+        const totalMins = Math.floor(audio.duration / 60);
+        const totalSecs = Math.floor(audio.duration % 60);
+        timeTotal.textContent = `${totalMins}:${totalSecs < 10 ? '0' : ''}${totalSecs}`;
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      if(btnNext) btnNext.click();
+    });
+  }
+  
+  if(progressWrapper && audio) {
+    progressWrapper.addEventListener('click', (e: MouseEvent) => {
+      const width = progressWrapper.clientWidth;
+      const clickX = e.offsetX;
+      const duration = audio.duration;
+      audio.currentTime = (clickX / width) * duration;
+    });
+  }
+
+  if(trackItems.length > 0) loadTrack(0);
+
   // Odyssee SVG Line Draw
   gsap.to('.odyssee-line-draw', {
     strokeDashoffset: 0,
